@@ -8,11 +8,14 @@
 
     <link rel="stylesheet" href="./lib/css/reset.css">
     <link rel="stylesheet" href="./lib/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/css/slick.css">
     <link rel="stylesheet" href="./lib/css/fonts.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="./lib/js/jquery-3.6.0.min.js"></script>
     <script src="./lib/js/jquery-1.12.4.min.js"></script>
+    <script src="./lib/js/slick.min.js"></script>
     <script src="./lib/js/swiper-bundle.min.js"></script>
     <script src="./js/custom.js"></script>
 </head>
@@ -91,9 +94,25 @@
     </header>
     <main id="content">
         <section class="main_visual">
-            <div class="slg">
+            <!-- <h2 class="blind">메인 비주얼</h2> -->
+            <div class="main_visual_slide">
+                <div class="itm itm01">
+                    <div class="txt"></div>
+                </div>
+                <div class="itm itm02">
+                    <div class="txt"></div>
+                </div>
+                <div class="itm itm03">
+                    <div class="txt"></div>
+                </div>
             </div>
+            <!-- <div class="arrows">
+    <button class="prev"><img src="images/arrow-left.svg" alt="이전"></button>
+    <button class="next"><img src="images/arrow-right.svg" alt="다음"></button>
+  </div>
+  <span class="wheel">scroll</span> -->
         </section>
+
         <section class="main_our default">
             <div class="title">
                 <h2>우리가 꿈꾸는 미래를 건설합니다.</h2>
@@ -105,8 +124,8 @@
                             <figure>
                                 <img src="./images/main_our011.png" alt="">
                             </figure>
-                            <h2>대전 베이스볼드림파크</h2>
-                            <strong>건축</strong>
+
+                            <strong>대전 베이스볼드림파크</strong>
                             <p>
                                 새로운 역사와 문화를 창조합니다.
                             </p>
@@ -117,7 +136,7 @@
                                 <img src="./images/main_our012.png" alt="">
                             </figure>
                             <strong>한샘대교</strong>
-                            <div class="cate">토목</div>
+
                             <p>
                                 세상을 연결하며 변화를 이끕니다.
                             </p>
@@ -126,8 +145,8 @@
                             <figure>
                                 <img src="./images/main_our013.png" alt="">
                             </figure>
-                            <h2>대전소각장</h2>
-                            <strong>플랜트</strong>
+
+                            <strong>대전소각장</strong>
                             <p>
                                 우수기술력으로 가치를 창출합니다.
                             </p>
@@ -136,8 +155,8 @@
                             <figure>
                                 <img src="./images/main_our014.jpg" alt="">
                             </figure>
-                            <h2>엘리프 송촌 더 파크</h2>
-                            <strong>주택</strong>
+
+                            <strong>엘리프 송촌 더 파크</strong>
                             <p>
                                 새로운 삶의 방식을 만들어갑니다.
                             </p>
@@ -146,7 +165,7 @@
                             <figure>
                                 <img src="./images/main_our016.jpg" alt="">
                             </figure>
-                            <h2>엘리프 송촌 더 파크</h2>
+
                             <strong> 주택</strong>
                             <p>
                                 새로운 삶의 방식을 만들어갑니다.
@@ -156,7 +175,6 @@
                             <figure>
                                 <img src="./images/main_our017.jpg" alt="">
                             </figure>
-                            <h2>엘리프 송촌 더 파크</h2>
                             <strong> 주택</strong>
                             <p>
                                 새로운 삶의 방식을 만들어갑니다.
@@ -167,42 +185,51 @@
                 </div>
             </div>
         </section>
-
-        <footer class="main_footer">
+        <section class="main_intro">
+            <h2 class="intro_title">계룡 소개</h2>
+            <div class="intro_features">
+                <div class="feature_item">
+                    <img src="./images/icon01.png" alt="사회공헌 아이콘">
+                    <h2>사회공헌</h2>
+                    <p>삶의 질 향상에 기여하고자 합니다.</p>
+                </div>
+                <div class="feature_item">
+                    <img src="./images/icon02.png" alt="E-브로슈어 아이콘">
+                    <h2>E-브로슈어</h2>
+                    <p>기업정보와 사업실적을 담은 브로슈어</p>
+                </div>
+                <div class="feature_item">
+                    <img src="./images/icon03.png" alt="ESG 보고서 아이콘">
+                    <h2>ESG 보고서</h2>
+                    <p>2023년 지속가능경영 보고서</p>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="main_footer">
             <div class="footer_wrap">
-                <!-- top 영역: 로고 + family site -->
                 <div class="footer_top">
                     <div class="footer_logo">KYERYONG</div>
-                    <div class="footer_family" id="familyDropdown">
-                        <button class="family_toggle" onclick="toggleFamily()">Family Site <span
-                                class="arrow">▾</span></button>
-                        <ul class="family_list">
-                            <li><a href="#">협력사 시스템</a></li>
-                        </ul>
+                    <div class="footer_family">
+                        <button class="family_name">
+                            Family Site
+                            <span class="arrow"></span>
+                        </button>
                     </div>
                 </div>
-                <!-- bottom 영역: 약관 링크 + 카피라이트 -->
                 <div class="footer_bottom">
                     <nav class="footer_links">
-                        <a href="#">개인정보처리방침</a>
-                        <a href="#">이용약관</a>
-                        <a href="#">이메일무단수집거부</a>
-                        <a href="#">사이트맵</a>
-                        <a href="#">공지사항</a>
+                        <a href="">개인정보처리방침</a>
+                        <a href="">이용약관</a>
+                        <a href="">이메일무단수집거부</a>
+                        <a href="">사이트맵</a>
+                        <a href="">공지사항</a>
                     </nav>
-                    <div class="footer_copy">COPYRIGHT ⓒ 2021 BY KYERYONG CONSTRUCTION</div>
-
+                    <div class="footer_copy">
+                        COPYRIGHT ⓒ 2021 BY KYERYONG CONSTRUCTION
+                    </div>
                 </div>
             </div>
         </footer>
-
-        <script>
-            function toggleFamily() {
-                document
-                    .getElementById('familyDropdown')
-                    .classList.toggle('open');
-            }
-        </script>
 
 </body>
 
