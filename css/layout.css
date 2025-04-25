@@ -4,13 +4,13 @@
 }
 
 .default {
-    padding: 120px 0;
+    padding: 160px 0;
 }
 
 .default .title {
     max-width: 1410px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .default .title h2 {
